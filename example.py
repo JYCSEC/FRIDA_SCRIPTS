@@ -1,3 +1,8 @@
+#From frida.de/docs/installation
+#Gets process information from 'cat' in Linux
+#Don't forget sudo sysctl kernel.yama.ptrace_scope=0
+#Work on copies, not base files
+
 import frida
 
 def on_message(message, data):
