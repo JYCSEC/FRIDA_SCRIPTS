@@ -7,6 +7,7 @@ script = session.create_script("""
 Interceptor.attach(ptr("%s"), {
     onEnter: function(args) {
         send(args[0].toInt32());
+        args[0] = ptr("1337");
         }
     });
 """ % int(sys.argv[1], 16))
